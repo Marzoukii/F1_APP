@@ -61,7 +61,7 @@
         android:hint="@string/text_firstEditText"
         android:textColorHint="@color/colorHintFist"
         android:textColor="@color/textColorfirstEdit"
-        android:digits="0123456789qQwWeErRtTzZuUiIoOpPaAsSdDfFgGhHjJkKlLyYxXcCvVbBnNmM"
+        android:digits="qQwWeErRtTzZuUiIoOpPaAsSdDfFgGhHjJkKlLyYxXcCvVbBnNmM"
         android:ems="10"
         android:padding="@dimen/paddingfirstEdit"
         android:background="@drawable/rounded_border_edittext"
@@ -87,7 +87,7 @@
         android:hint="@string/text_secondEditText"
         android:textColorHint="@color/colorHintSecond"
         android:textColor="@color/textColorSecondEdit"
-        android:digits="0123456789qQwWeErRtTzZuUiIoOpPaAsSdDfFgGhHjJkKlLyYxXcCvVbBnNmM"
+        android:digits="qQwWeErRtTzZuUiIoOpPaAsSdDfFgGhHjJkKlLyYxXcCvVbBnNmM"
         android:padding="@dimen/paddingSecondEdit"
         android:background="@drawable/rounded_border_edittext"
          />
