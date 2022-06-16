@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginLeftScreen_Imag">65.01dp</dimen>
+    <dimen name="marginRightScreen_Img">63.99dp</dimen>
+    <dimen name="width_Small_icon_login">153dp</dimen>
+    <dimen name="margin_top_Small_Icon_Login">120dp</dimen>
+    <dimen name="text_sizeTitle">30dp</dimen>
+    <dimen name="margin_top_SecondTitle_Login">10dp</dimen>
+    <dimen name="textSize">40px</dimen>
+    <dimen name="textsize_FirstLabel_Login">15dp</dimen>
+    <dimen name="margin_top_firstlabel">90dp</dimen>
+    <dimen name="width_firstEditText">317dp</dimen>
+    <dimen name="margin_top_secondlabel">15dp</dimen>
+    <dimen name="width_btn_login">209dp</dimen>
+    <dimen name="margin_Top_btn">80dp</dimen>
+</resources>

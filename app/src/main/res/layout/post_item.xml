@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/name"
+    android:layout_marginBottom="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:background="@color/white"
+  android:layout_marginLeft="26dp"
+    android:layout_marginRight="26dp"
+    android:layout_marginTop="10dp"
+android:layout_gravity="center_horizontal"
+    app:cardCornerRadius="3px"
+app:cardElevation="5dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/textID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="#ED4040"
+            android:textSize="18sp"
+            android:fontFamily="@font/sf_pro_display_meduim"
+            android:textStyle="bold"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="27dp"
+            />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginBottom="12dp"
+            android:foreground="@drawable/corner_image"
+            android:src="@drawable/f1"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_meduim"
+                android:text="Max Verstappen"
+                android:textColor="#2C2B36"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="18dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="143dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/sf_display_regular"
+                android:text="Red Bull Racing Honda"
+                android:layout_marginLeft="25dp"
+                android:textColor="#2C2B36"
+                android:textSize="15sp"
+                android:layout_marginBottom="21dp"
+                tools:ignore="MissingConstraints"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
