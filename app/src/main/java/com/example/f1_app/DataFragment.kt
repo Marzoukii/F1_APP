@@ -1,17 +1,20 @@
-package com.example.f1_app.ui
+package com.example.f1_app
 
-import android.app.Activity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
 import android.view.View
-import com.example.f1_app.R
+import android.view.ViewGroup
 import com.example.f1_app.adapter.MainAdapter
 import com.example.f1_app.model.Pilote
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_data.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class MainActivity : Activity() {
+
+class DataFragment : Fragment() {
     val listPilote = mutableListOf(
         Pilote(
             1,
@@ -77,13 +80,22 @@ class MainActivity : Activity() {
 
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+       val view= inflater.inflate(R.layout.fragment_data, container, false)
 
-        val intent = intent
-        var first = intent.getStringExtra("firstname")
-        var last = intent.getStringExtra("lastname")
+
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        var first = arguments?.getString("firstname")
+        var last = arguments?.getString("lastname")
+
         nom.text=first.toString()
         Prenom.text=last.toString()
         val adapter = MainAdapter(listOf())
@@ -95,22 +107,11 @@ class MainActivity : Activity() {
 
             progress.visibility = View.GONE
 
-                adapter.items = listPilote
-                adapter.notifyDataSetChanged()
-
-
-
-                //*************Add product to Cart**************************//
-                //************Listener On Add Product***********************//
+            adapter.items = listPilote
+            adapter.notifyDataSetChanged()
 
 
         }
-
-
-
-
-
-
     }
 
 }

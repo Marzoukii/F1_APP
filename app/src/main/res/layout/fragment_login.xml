@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="@dimen/width_Small_icon_login"
+        android:layout_height="@dimen/height_Small_icon_login"
+        android:src="@drawable/imgvector"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top_Small_Icon_Login"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_name_login"
+        android:textColor="@color/color_title_login"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_sizeTitle"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top_Title_Login"
+        android:fontFamily="@font/sf_pro_display_meduim"
+
+
+        />
+    <TextView
+        android:layout_width="@dimen/width_secondTitle_Login"
+        android:layout_height="@dimen/height_secondTitle_Login"
+        android:text="@string/name_Title_SecondTitle"
+        android:textColor="@color/color_secondTitle_Login"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top_SecondTitle_Login"
+        android:fontFamily="@font/sf_display_regular"
+        android:textSize="@dimen/textSize_SecondTitle_Login"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NameFirstLabel_Login"
+        android:textSize="@dimen/textsize_FirstLabel_Login"
+        android:fontFamily="@font/sf_display_regular"
+        android:layout_marginLeft="@dimen/margin_Left_firstlabel_login"
+        android:textColor="@color/color_firstlabel_login"
+        android:layout_marginTop="@dimen/margin_top_firstlabel"
+        android:layout_marginBottom="@dimen/margin_Bottom_firstlabel"
+        />
+    <EditText
+        android:id="@+id/txtfirstname"
+        android:layout_width="@dimen/width_firstEditText"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="@string/text_firstEditText"
+        android:textColorHint="@color/colorHintFist"
+        android:textColor="@color/textColorfirstEdit"
+        android:digits="qQwWeErRtTzZuUiIoOpPaAsSdDfFgGhHjJkKlLyYxXcCvVbBnNmM"
+        android:ems="10"
+        android:padding="@dimen/paddingfirstEdit"
+        android:background="@drawable/rounded_border_edittext"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NameSecondLabel_Login"
+        android:textSize="@dimen/textsize_SecondLabel_Login"
+        android:fontFamily="@font/sf_display_regular"
+        android:layout_marginLeft="@dimen/margin_Left_secondlabel_login"
+        android:textColor="@color/color_secondlabel_login"
+        android:layout_marginTop="@dimen/margin_top_secondlabel"
+        android:layout_marginBottom="@dimen/margin_bottom_secondlabel"
+        />
+    <EditText
+        android:id="@+id/txtlastname"
+        android:layout_width="@dimen/width_secondEditText"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:hint="@string/text_secondEditText"
+        android:textColorHint="@color/colorHintSecond"
+        android:textColor="@color/textColorSecondEdit"
+        android:digits="qQwWeErRtTzZuUiIoOpPaAsSdDfFgGhHjJkKlLyYxXcCvVbBnNmM"
+        android:padding="@dimen/paddingSecondEdit"
+        android:background="@drawable/rounded_border_edittext"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/width_btn_login"
+        android:layout_height="@dimen/height_btn_login"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_Top_btn"
+        android:background="@drawable/button"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:drawablePadding="-25dp"
+        android:paddingRight="@dimen/padding_Right_btn"
+        android:text="@string/Name_btn"
+        android:fontFamily="@font/sf_pro_display_meduim"
+        android:textColor="@color/white" />
+</LinearLayout>

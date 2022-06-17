@@ -7,4 +7,6 @@
     <string name="text_firstEditText">Type in your first name</string>
     <string name="text_secondEditText">Type in your last name</string>
     <string name="Name_btn">Next</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
