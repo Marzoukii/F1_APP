@@ -85,7 +85,6 @@
         android:hint="@string/text_secondEditText"
         android:textColorHint="@color/colorHintSecond"
         android:textColor="@color/textColorSecondEdit"
-        android:digits="qQwWeErRtTzZuUiIoOpPaAsSdDfFgGhHjJkKlLyYxXcCvVbBnNmM"
         android:padding="@dimen/paddingSecondEdit"
         android:background="@drawable/rounded_border_edittext"
         />
