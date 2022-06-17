@@ -1,20 +1,23 @@
 package com.example.f1_app
 
+import com.example.f1_app.R
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.f1_app.adapter.MainAdapter
+import com.example.f1_app.databinding.FragmentDataBinding
 import com.example.f1_app.model.Pilote
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_data.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 
 class DataFragment : Fragment() {
+
+    private  var _binding: FragmentDataBinding? = null
+    private val binding get() = _binding!!
     val listPilote = mutableListOf(
         Pilote(
             1,
@@ -85,10 +88,8 @@ class DataFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-       val view= inflater.inflate(R.layout.fragment_data, container, false)
-
-
-        return view
+        _binding = FragmentDataBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -96,22 +97,27 @@ class DataFragment : Fragment() {
         var first = arguments?.getString("firstname")
         var last = arguments?.getString("lastname")
 
-        nom.text=first.toString()
-        Prenom.text=last.toString()
+        binding.nom.text =first.toString()
+        binding.Prenom.text=last.toString()
         val adapter = MainAdapter(listOf())
 
-        recy.adapter = adapter
-        progress.visibility = View.VISIBLE
+        binding.recy.adapter = adapter
+        binding.progress.visibility = View.VISIBLE
         GlobalScope.launch(Dispatchers.Main) {
 
 
-            progress.visibility = View.GONE
+            binding.progress.visibility = View.GONE
 
             adapter.items = listPilote
             adapter.notifyDataSetChanged()
 
 
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }

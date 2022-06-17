@@ -9,34 +9,33 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import com.example.f1_app.databinding.FragmentLoginBinding
 import kotlinx.android.synthetic.main.fragment_login.*
 
 
 class LoginFragment : Fragment() {
 
-
+    private  var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view= inflater.inflate(R.layout.fragment_login, container, false)
-
-        return view
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val login=view.findViewById<Button>(R.id.btn_login)
-        login.setOnClickListener {
-            if (txtfirstname.text.isEmpty() ){
-                txtfirstname.error="Champ obligatoire!"
 
-            }
-            else if (txtlastname.text.isEmpty()){
-                txtlastname.error="Champ obligatoire!"
-            }
 
-            else if (!txtfirstname.text.isEmpty()) {
+
+        binding.btnLogin.setOnClickListener {
+            if (binding.txtfirstname.text.isEmpty() ){
+                binding.txtfirstname.error="Champ obligatoire!"
+
+            } else if (binding.txtlastname.text.isEmpty()){
+                binding.txtlastname.error="Champ obligatoire!"
+            } else if (!binding.txtfirstname.text.isEmpty()) {
                 //  val intent = Intent(this, MainActivity::class.java)
 
                 val bundle = bundleOf("firstname" to txtfirstname.text.toString(),"lastname" to txtlastname.text.toString())
