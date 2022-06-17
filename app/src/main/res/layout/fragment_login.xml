@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.LoginActivity"
     android:orientation="vertical"
     android:background="@color/white">
 
@@ -61,7 +60,6 @@
         android:hint="@string/text_firstEditText"
         android:textColorHint="@color/colorHintFist"
         android:textColor="@color/textColorfirstEdit"
-        android:digits="qQwWeErRtTzZuUiIoOpPaAsSdDfFgGhHjJkKlLyYxXcCvVbBnNmM"
         android:ems="10"
         android:padding="@dimen/paddingfirstEdit"
         android:background="@drawable/rounded_border_edittext"
