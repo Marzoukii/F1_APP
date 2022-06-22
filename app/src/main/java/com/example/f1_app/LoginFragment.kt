@@ -50,7 +50,6 @@ class LoginFragment : Fragment() {
             }
         }
     private fun verifUserInput():Boolean{
-
         if (binding.txtfirstname.text.isEmpty() ) {
 
             binding.txtfirstname.error = "Please specify your first name "
