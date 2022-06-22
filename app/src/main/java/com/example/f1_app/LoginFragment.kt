@@ -50,35 +50,53 @@ class LoginFragment : Fragment() {
             }
         }
     private fun verifUserInput():Boolean{
+        if(binding.txtfirstname.text.matches("^(?=.*[_.()$&@*+#£?!-;0-9]).*$".toRegex())){
+
+            // binding.txtfirstname.error = "Special characters are forbidden"
+            Toast.makeText(this.context,"numbers and special characters are forbidden",1000).show()
+            return false
+        }
+        if (binding.txtfirstname.text.isEmpty() && binding.txtlastname.text.isEmpty() ) {
+
+            //binding.txtfirstname.error = "Please specify your first name "
+            Toast.makeText(this.context,"the fields are empty, try again",1000).show()
+            return false
+        }
         if (binding.txtfirstname.text.isEmpty() ) {
 
-            binding.txtfirstname.error = "Please specify your first name "
+            //binding.txtfirstname.error = "Please specify your first name "
+            Toast.makeText(this.context,"Please specify your first name",1000).show()
             return false
         }
         if (binding.txtlastname.text.isEmpty()) {
 
-            binding.txtlastname.error = "Please specify your last name"
+            //binding.txtlastname.error = "Please specify your last name"
+            Toast.makeText(this.context,"Please specify your last name",1000).show()
             return false
         }
         if(binding.txtfirstname.text.matches("^(?=.*[_.()$&@*+#£?!;-]).*$".toRegex())){
 
-            binding.txtfirstname.error = "Special characters are forbidden"
+           // binding.txtfirstname.error = "Special characters are forbidden"
+            Toast.makeText(this.context,"Special characters are forbidden",1000).show()
             return false
         }
 
        if(binding.txtlastname.text.matches("^(?=.*[_.()$&@*+#£?!;-]).*$".toRegex())){
 
-            binding.txtlastname.error = "Special characters are forbidden"
+            //binding.txtlastname.error = "Special characters are forbidden"
+           Toast.makeText(this.context,"Special characters are forbidden",1000).show()
             return false
         }
         if(binding.txtlastname.text.matches("(.*[0-9].*)".toRegex())){
 
-            binding.txtlastname.error = "Numbers are forbidden"
+           // binding.txtlastname.error = "Numbers are forbidden"
+            Toast.makeText(this.context,"Numbers are forbidden",1000).show()
             return false
         }
         if(binding.txtfirstname.text.matches("(.*[0-9].*)".toRegex())){
 
-            binding.txtfirstname.error = "Numbers are forbidden"
+           // binding.txtfirstname.error = "Numbers are forbidden"
+            Toast.makeText(this.context,"Numbers are forbidden",1000).show()
             return false
         }
 
