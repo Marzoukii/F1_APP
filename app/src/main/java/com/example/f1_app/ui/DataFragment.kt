@@ -1,4 +1,4 @@
-package com.example.f1_app
+package com.example.f1_app.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -18,68 +18,7 @@ class DataFragment : Fragment() {
 
     private  var _binding: FragmentDataBinding? = null
     private val binding get() = _binding!!
-   /* val listPilote = mutableListOf(
-        Pilote(
-            1,
-            R.drawable.f1,
-            "Max Verstappen",
-            "Red Bull Racing Honda"
-        ),
-        Pilote(
-            2,
-            R.drawable.f2,
-            "Lewis Hamilton",
-            "Mercedes"
-        ),
-        Pilote(
-            3,
-            R.drawable.f3,
-            "Valtteri Bottas",
-            "Mercedes"
-        ),
-        Pilote(
-            4,
-            R.drawable.f4,
-            "Carlos Sainz",
-            "Ferrari"
-        ),
-        Pilote(
-            5,
-            R.drawable.f5,
-            "Lando Norris",
-            "Mclaren Mercedes"
-        ),
-        Pilote(
-            6,
-            R.drawable.f6,
-            "Lando Norris",
-            "Mclaren Mercedes"
-        ),
-        Pilote(
-            7,
-            R.drawable.f7,
-            "Charles Leclerc",
-            "Ferrari"
-        ),
-        Pilote(
-            8,
-            R.drawable.f8,
-            "Daniel Ricciardo",
-            "Mclaren Mercedes"
-        ),
-        Pilote(
-            9,
-            R.drawable.f9,
-            "Pierre Gasly",
-            "Alphatauri Honda"
-        ),
-        Pilote(
-            10,
-            R.drawable.f10,
-            "Fernando Alonso",
-            "Alpine Renault"
-        ),
-    )*/
+
 
 private lateinit var piloteViewModel: PiloteViewModel
 private lateinit var linearLayoutManager: LinearLayoutManager
@@ -115,7 +54,7 @@ private val mainAdapter by lazy {
 layoutManager=linearLayoutManager
             adapter=mainAdapter
         }
-        piloteViewModel.getPilotes()
+        piloteViewModel.getPilotesCurrent()
 
         piloteViewModel.pilotes.observe(viewLifecycleOwner, Observer {
             mainAdapter.submitList(it)

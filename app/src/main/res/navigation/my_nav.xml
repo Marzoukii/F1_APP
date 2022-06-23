@@ -6,7 +6,7 @@
     app:startDestination="@id/splashScreenFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.f1_app.LoginFragment"
+        android:name="com.example.f1_app.ui.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -15,12 +15,12 @@
     </fragment>
     <fragment
         android:id="@+id/dataFragment"
-        android:name="com.example.f1_app.DataFragment"
+        android:name="com.example.f1_app.ui.DataFragment"
         android:label="fragment_data"
         tools:layout="@layout/fragment_data" />
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.example.f1_app.SplashScreenFragment"
+        android:name="com.example.f1_app.ui.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action

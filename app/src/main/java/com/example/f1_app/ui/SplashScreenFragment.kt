@@ -1,6 +1,5 @@
-package com.example.f1_app
+package com.example.f1_app.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -9,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.f1_app.R
 import kotlinx.coroutines.NonCancellable
 
 
