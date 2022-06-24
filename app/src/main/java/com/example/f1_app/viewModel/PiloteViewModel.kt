@@ -11,7 +11,7 @@ class PiloteViewModel : ViewModel(){
 
     private val repository= Repository()
     private val _pilotes=MutableLiveData<List<Pilote>>()
-  //  val pilotes: LiveData<List<Pilote>> = _pilotes
+    val pilotes: LiveData<List<Pilote>> = _pilotes
 
 
     fun getPilotesCurrent(){

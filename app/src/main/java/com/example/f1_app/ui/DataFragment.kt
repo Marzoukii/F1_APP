@@ -56,7 +56,7 @@ layoutManager=linearLayoutManager
         }
         piloteViewModel.getPilotesCurrent()
 
-        piloteViewModel.pilotes.observe(viewLifecycleOwner, Observer {
+        piloteViewModel.pilotes.observe(this, Observer {
             mainAdapter.submitList(it)
         })
         binding.nom.text =first.toString()
